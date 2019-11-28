@@ -17,13 +17,13 @@ img {
 }
 
 body {
-    font-family: 'Squada One', cursive;
+    font-family: "Squada One", cursive;
     font-size: 16px;
     line-height: 26px;
     color: #000000;
-    background: #1F1C2C;
-    background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);
-    background: linear-gradient(to right, #928DAB, #1F1C2C);
+    background: #1f1c2c;
+    background: -webkit-linear-gradient(to right, #928dab, #1f1c2c);
+    background: linear-gradient(to right, #928dab, #1f1c2c);
 }
 
 .container {
@@ -44,6 +44,15 @@ body {
     margin: 0;
 }
 
+.info {
+    display: inline-block;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /* basic-end */
 
@@ -52,11 +61,13 @@ body {
 }
 
 .fish {
+    display: none;
     position: fixed;
     animation-name: move;
     animation-duration: 10s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
+    top: 30%;
 }
 
 .body {
@@ -275,23 +286,29 @@ body {
 
 /* ==================== */
 
-@media(min-width:320px) and (max-width:767px) {
+@media (min-width: 320px) and (max-width: 767px) {
     .container {
         width: 320px;
     }
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .container {
         width: 600px;
     }
 }
 
-@media(min-width:1170px) {
+@media (min-width: 1170px) {
     .container {
         width: 1170px;
     }
     .buble-root {
+        display: block;
+    }
+    .info {
+        display: none;
+    }
+    .fish {
         display: block;
     }
     @keyframes move {
